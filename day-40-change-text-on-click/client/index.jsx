@@ -12,9 +12,11 @@ class App extends React.Component {
   render () {
     return <div>
         <Header />
+
+        <p>Re-implementing the change text on click assignment</p>
+
         <ChangeText />
 
-        <p className="paragraph"></p>
       </div>;
   }
 }

@@ -2,32 +2,35 @@ var React = require('react');
 
 class ChangeText extends React.Component{
 
-  constructor(){
+  constructor() {
     super();
-
     this.state = {
       text: 'Click Me!'
     }
   }
 
-  clickParagraph(){
+  changeText(){
+    console.log('changed');
     this.setState({
-      text: 'El Clickola'
+      text: 'Clicked on the text'
     });
   }
 
-  render(){
+  render() {
     var self = this;
+
+    function clickParagraph() {
+      console.log('clicked.')
+      self.changeText();
+    }
+
+    return (
+      <p className="paragraph" onClick={clickParagraph}>{this.state.text}</p>
+
+    );
+
   }
 
-  function paraClick() {
-    self.clickParagraph();
-  }
-
-  return (
-    <p className="paragraph" onClick={paraClick}>{this.state.text}</p>
-
-  );
 }
 
 module.exports = ChangeText;
