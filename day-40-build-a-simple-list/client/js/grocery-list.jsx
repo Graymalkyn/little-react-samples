@@ -15,7 +15,6 @@ class GroceryList extends React.Component {
       {id:7, name: 'cheese'},
       {id:8, name: 'gum'}
     ];
-
   }
 
   render() {
@@ -28,9 +27,6 @@ class GroceryList extends React.Component {
       </ul>
     )
   }
-
-
-
 }
 
 module.exports = GroceryList;

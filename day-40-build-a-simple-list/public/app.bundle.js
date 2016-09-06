@@ -59,9 +59,9 @@
 
 	var Header = __webpack_require__(172).Header;
 
-	var GroceryList = __webpack_require__(177);
+	var GroceryList = __webpack_require__(173);
 
-	__webpack_require__(173);
+	__webpack_require__(174);
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -21513,13 +21513,65 @@
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+
+	var GroceryList = function (_React$Component) {
+	  _inherits(GroceryList, _React$Component);
+
+	  function GroceryList() {
+	    _classCallCheck(this, GroceryList);
+
+	    var _this = _possibleConstructorReturn(this, (GroceryList.__proto__ || Object.getPrototypeOf(GroceryList)).call(this));
+
+	    _this.groceryList = [{ id: 1, name: 'sausage' }, { id: 2, name: 'shrimp' }, { id: 3, name: 'Texjoy' }, { id: 4, name: 'Dr Pepper' }, { id: 5, name: 'steak' }, { id: 6, name: 'Tostitos' }, { id: 7, name: 'cheese' }, { id: 8, name: 'gum' }];
+
+	    return _this;
+	  }
+
+	  _createClass(GroceryList, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return React.createElement(
+	        'ul',
+	        null,
+	        this.groceryList.map(function (list) {
+	          return React.createElement(
+	            'li',
+	            { key: list.id },
+	            list.name
+	          );
+	        })
+	      );
+	    }
+	  }]);
+
+	  return GroceryList;
+	}(React.Component);
+
+	module.exports = GroceryList;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(175);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(176)(content, {});
+	var update = __webpack_require__(177)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -21536,10 +21588,10 @@
 	}
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(175)();
+	exports = module.exports = __webpack_require__(176)();
 	// imports
 
 
@@ -21550,7 +21602,7 @@
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports) {
 
 	/*
@@ -21606,7 +21658,7 @@
 
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -21856,58 +21908,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(1);
-
-	var GroceryList = function (_React$Component) {
-	  _inherits(GroceryList, _React$Component);
-
-	  function GroceryList() {
-	    _classCallCheck(this, GroceryList);
-
-	    var _this = _possibleConstructorReturn(this, (GroceryList.__proto__ || Object.getPrototypeOf(GroceryList)).call(this));
-
-	    _this.groceryList = [{ id: 1, name: 'sausage' }, { id: 2, name: 'shrimp' }, { id: 3, name: 'Texjoy' }, { id: 4, name: 'Dr Pepper' }, { id: 5, name: 'steak' }, { id: 6, name: 'Tostitos' }, { id: 7, name: 'cheese' }, { id: 8, name: 'gum' }];
-
-	    return _this;
-	  }
-
-	  _createClass(GroceryList, [{
-	    key: 'render',
-	    value: function render() {
-
-	      return React.createElement(
-	        'ul',
-	        null,
-	        this.groceryList.map(function (list) {
-	          return React.createElement(
-	            'li',
-	            { key: list.id },
-	            list.name
-	          );
-	        })
-	      );
-	    }
-	  }]);
-
-	  return GroceryList;
-	}(React.Component);
-
-	module.exports = GroceryList;
 
 /***/ }
 /******/ ]);
