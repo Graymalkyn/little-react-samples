@@ -4,34 +4,39 @@ class Toggle extends React.Component {
 
   constructor(props){
       super(props);
+//original state
       this.state = {
         onClicked: false
       }
       this.changeColorButton = this.changeColorButton.bind(this);
     }
+//changes state
     changeColorButton(){
       this.setState({
          onClicked: true
       });
     }
     render() {
-      var _style;
-      if (this.state.onClicked){ // clicked button style
-        _style = {
+      var style;
+//clicked button style
+      if (this.state.onClicked){
+        style = {
           background: "black",
           color: "white"
           }
       }
-      else{                     // default button style
-        _style = {
+//default button style
+      else{
+        style = {
           background: "white",
           }
       }
+//button
       return (
           <div>
               <button
                   onClick={this.changeColorButton}
-                  style={_style}>Press me !</button>
+                  style={style}>Press me !</button>
           </div>
       );
     }

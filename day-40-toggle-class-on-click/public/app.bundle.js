@@ -21530,6 +21530,7 @@
 	  function Toggle(props) {
 	    _classCallCheck(this, Toggle);
 
+	    //original state
 	    var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
 
 	    _this.state = {
@@ -21538,6 +21539,8 @@
 	    _this.changeColorButton = _this.changeColorButton.bind(_this);
 	    return _this;
 	  }
+	  //changes state
+
 
 	  _createClass(Toggle, [{
 	    key: "changeColorButton",
@@ -21549,19 +21552,21 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _style;
+	      var style;
+	      //clicked button style
 	      if (this.state.onClicked) {
-	        // clicked button style
-	        _style = {
+	        style = {
 	          background: "black",
 	          color: "white"
 	        };
-	      } else {
-	        // default button style
-	        _style = {
-	          background: "white"
-	        };
 	      }
+	      //default button style
+	      else {
+	          style = {
+	            background: "white"
+	          };
+	        }
+	      //button
 	      return React.createElement(
 	        "div",
 	        null,
@@ -21569,7 +21574,7 @@
 	          "button",
 	          {
 	            onClick: this.changeColorButton,
-	            style: _style },
+	            style: style },
 	          "Press me !"
 	        )
 	      );
